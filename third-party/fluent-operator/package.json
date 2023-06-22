@@ -1,0 +1,51 @@
+{
+  "name": "@luminati-io/kubernetes-models-fluent-operator",
+  "version": "2.2.0",
+  "description": "Models for https://github.com/fluent/fluent-operator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luminati-io/kubernetes-models-ts.git"
+  },
+  "homepage": "https://github.com/luminati-io/kubernetes-models-ts/tree/master/third-party/fluent-operator",
+  "author": "Kirill Alexandrovsky <kirilla@gmail.com>",
+  "license": "MIT",
+  "main": "index.cjs",
+  "module": "index.mjs",
+  "types": "index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "build": "crd-generate && publish-scripts build",
+    "prepack": "publish-scripts prepack"
+  },
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist",
+    "linkDirectory": true
+  },
+  "keywords": [
+    "kubernetes",
+    "kubernetes-models",
+    "argo",
+    "argo-cd"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
+  "dependencies": {
+    "@kubernetes-models/apimachinery": "workspace:^",
+    "@kubernetes-models/base": "workspace:^",
+    "@kubernetes-models/validate": "workspace:^",
+    "tslib": "^2.4.0"
+  },
+  "devDependencies": {
+    "@kubernetes-models/crd-generate": "workspace:^",
+    "@kubernetes-models/publish-scripts": "workspace:^",
+    "vitest": "^0.29.8"
+  },
+  "crd-generate": {
+    "input": [
+      "https://raw.githubusercontent.com/fluent/fluent-operator/v2.2.0/manifests/setup/fluent-operator-crd.yaml"
+    ],
+    "output": "./gen"
+  }
+}
