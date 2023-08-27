@@ -1,6 +1,6 @@
 {
   "name": "@luminati-io/kubernetes-models-fluent-operator",
-  "version": "2.2.0",
+  "version": "2.4.0",
   "description": "Models for https://github.com/fluent/fluent-operator",
   "repository": {
     "type": "git",
@@ -25,8 +25,9 @@
   "keywords": [
     "kubernetes",
     "kubernetes-models",
-    "argo",
-    "argo-cd"
+    "fluent-operator",
+    "fluentd",
+    "fluent-bit"
   ],
   "engines": {
     "node": ">=14"
@@ -44,7 +45,7 @@
   },
   "crd-generate": {
     "input": [
-      "https://raw.githubusercontent.com/fluent/fluent-operator/v2.2.0/manifests/setup/fluent-operator-crd.yaml"
+      "https://raw.githubusercontent.com/fluent/fluent-operator/v2.4.0/manifests/setup/fluent-operator-crd.yaml"
     ],
     "output": "./gen"
   }
